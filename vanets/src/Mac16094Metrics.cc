@@ -148,9 +148,9 @@ void Mac16094Metrics::handleUpperMsg(cMessage* message) {
         //(1) I = ( 1 − wI ) × P^2 + wI × C^2
         //∆I = I min + ( I max − I min ) × I
         if(std::string(thisMsg->getName())== "beacon") {
-            std::cout<<"Received upperLayer message of type: "<< thisMsg->getName() << std::endl;
+           // std::cout<<"Received upperLayer message of type: "<< thisMsg->getName() << std::endl;
         }else{
-            std::cout<<"MessageType: "<<thisMsg->getName() << std::endl;
+            //std::cout<<"MessageType: "<<thisMsg->getName() << std::endl;
         }
 
         t_access_category ac = mapUserPriority(thisMsg->getUserPriority());

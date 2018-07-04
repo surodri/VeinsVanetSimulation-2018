@@ -2,7 +2,7 @@
 <!-- debug config -->
 	
 <launch>
-	<basedir path="./src/northampton/" />
+	<basedir path="./simulations/northampton/" />
 	<copy file="northampton.net.xml" />
 	<copy file="northampton.rou.xml" />
 	<copy file="northampton.poly.xml" />

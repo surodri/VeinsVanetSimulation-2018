@@ -132,5 +132,3 @@ PhyLayer80211pMetrics.h:
 /home/veins/src/veins/src/veins/base/connectionManager/BaseConnectionManager.h:
 
 /home/veins/src/veins/src/veins/base/connectionManager/NicEntry.h:
-
-Decider80211pMetrics.h:
