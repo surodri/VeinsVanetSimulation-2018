@@ -56,6 +56,8 @@ protected:
 
     int randomizeSCH( int min, int max);
 
+private:
+    void recordChannelUtilized(const omnetpp::simtime_t& sendingDuration);
 };
 
 #endif /* MAC16094METRICS_H_ */

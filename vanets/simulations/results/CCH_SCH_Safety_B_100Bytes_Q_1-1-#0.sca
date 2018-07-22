@@ -1,0 +1,101 @@
+version 2
+run CCH_SCH_Safety_B_100Bytes_Q_1-0-20180719-04:28:08-30316
+attr configname CCH_SCH_Safety_B_100Bytes_Q_1
+attr datetime 20180719-04:28:08
+attr experiment CCH_SCH_Safety_B_100Bytes_Q_1
+attr inifile omnetpp.ini
+attr iterationvars $0=1
+attr iterationvarsf 1-
+attr measurement $0=1
+attr network vanets.RSUScenario
+attr processid 30316
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.debug false
+param **.coreDebug false
+param *.annotations.draw false
+param *.rsu[*].appl.beaconLengthBits 800bit
+param *.node[*].appl.beaconLengthBits 800bit
+param *.metricsApplication.appl.beaconLengthBits 800bit
+param *.node[*].appl.sendBeacons true
+param *.rsu[*].appl.sendBeacons false
+param *.metricsApplicaiton[*].appl.sendBeacons false
+param *.node[*].appl.dataOnSch true
+param *.rsu[*].appl.dataOnSch false
+param *.metricsApplication[*].appl.dataOnSch false
+param *.node[*].appl.sendData true
+param *.rsu[*].appl.sendData true
+param *.metricsApplication[*].appl.sendData false
+param *.node[*].appl.beaconInterval 0.1s
+param *.rsu[*].appl.beaconInterval 0.1s
+param *.metricsApplication[*].appl.beaconInterval 0.1s
+param *.node[*].appl.beaconPriority 3
+param *.rsu[*].appl.beaconPriority 3
+param *.metricsApplication[*].appl.beaconPriority 3
+param *.node[*].appl.dataPriority 2
+param *.rsu[*].appl.dataPriority 2
+param *.metricsApplication.appl.beaconPriority 2
+param *.**.nic.mac1609_4.queueSize 1
+param *.**.nic.mac1609_4.useServiceChannel true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param **.debug false
+param **.coreDebug false
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw false
+param *.obstacles.debug false
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.world.useTorus false
+param *.world.use2D false
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param *.manager.moduleType "\"vanets.CarWithMetrics\""
+param *.manager.moduleName "\"node\""
+param *.manager.moduleDisplayString "\"\""
+param *.manager.margin 25
+param *.manager.numVehicles 5
+param *.manager.debug true
+param *.rsu[0].mobility.x 2000
+param *.rsu[0].mobility.y 2000
+param *.rsu[0].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons false
+param *.rsu[*].appl.dataOnSch false
+param *.rsu[*].appl.beaconInterval 1s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.metricsApplication.applType "\"TraCIDemoRSU11p\""
+param *.metricsApplication.appl.debug false
+param *.metricsApplication.appl.headerLength "80 bit"
+param *.metricsApplication.appl.sendBeacons false
+param *.metricsApplication.appl.dataOnSch false
+param *.metricsApplication.appl.beaconInterval 1s
+param *.metricsApplication.appl.beaconUserPriority 7
+param *.metricsApplication.appl.dataUserPriority 2
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 100mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.sensitivity -89dBm
+param *.**.nic.mac1609_4.queueSize 1
+param *.**.nic.phy80211p.useThermalNoise true
+param *.**.nic.phy80211p.thermalNoise -110dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\", \"/root/Decider[@type='Decider80211p']\")"
+param *.**.nic.phy80211p.decider.collectCollisionStats true
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.collectCollisionStatistics true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].applType "\"TraCIDemo11p\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeac

@@ -19,7 +19,6 @@ import vanets.Mac16094Metrics;
 import vanets.PhyLayer80211pMetrics;
 import org.car2x.veins.modules.nic.INic80211p;
 
-//
 // This NIC implements an 802.11p network interface card.
 //
 // @author David Eckhoff
