@@ -329,5 +329,4 @@ double Mac16094Metrics::getThroughputMetricMac() {
 }
 
 Mac16094Metrics::~Mac16094Metrics() {
-    Mac1609_4::~Mac1609_4();
 }
