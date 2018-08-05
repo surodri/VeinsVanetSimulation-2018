@@ -21,8 +21,6 @@ metrics = ["SentPackets",
 		"chUtilizationSCH4",
 		"chUtilizationCCH"]
 
-sizes = 5
-
 for metric in metrics:
 		
 	command = "grep -r " + metric + " -H *.sca | awk -F '-' '{print $1}' | sort -u "
@@ -31,12 +29,13 @@ for metric in metrics:
 
 	for fileName in fileNamesWithMetric:
 		metricFile = metric + "_" + fileName + ".txt"
-		scalarFile = fileName + ".sca"
+		scalarFile = fileName + "*"
 
 		print(metricFile)
 
 		if(not os.path.isdir("../../../results_per_metric/")):
 			os.popen("mkdir ../../../results_per_metric/")
-		createResultsCommand = "grep -r " + metric + scalarFile + " > ../../../results_per_metric/" + metricFile
+		createResultsCommand = "grep -r " + metric + " " +scalarFile + " > ../../../results_per_metric/" + metricFile
+		print(createResultsCommand)
 		os.popen(createResultsCommand)
 
