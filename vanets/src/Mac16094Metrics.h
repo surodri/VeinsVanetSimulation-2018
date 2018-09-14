@@ -37,11 +37,12 @@ public:
     double statsReceivedBits;
     double collisionsPktNonDecoded;
     std::map<int,simtime_t> channelUtilization;
-
+    std::map<int, double> previousSignalQuality;
+    std::map<int, double> channelPacketsTransmitted;
 
 protected:
     void computeThroughput(Metrics*, double, double);
-    void computeThroughputMbps(Metrics*, double , double, double);
+    void computeThroughputMbps(Metrics*, double, double, double);
 
     virtual void initialize(int);
     virtual void finish();
@@ -58,6 +59,8 @@ protected:
 
 private:
     void recordChannelUtilized(const omnetpp::simtime_t& sendingDuration);
+    void recordSignalQuality(double txPower);
+    void recordChannelPackets(int chan);
 };
 
 #endif /* MAC16094METRICS_H_ */
