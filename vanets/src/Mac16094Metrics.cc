@@ -79,7 +79,7 @@ void Mac16094Metrics::recordChannelUtilized(const simtime_t& sendingDuration) {
 
 void Mac16094Metrics::recordSignalQuality(double txPower){
     int channelUtilized = (activeChannel == type_CCH) ? Channels::CCH : mySCH;
-    previousSignalQuality[activeChannel] = txPower;
+    previousSignalQuality[channelUtilized] = txPower;
 }
 
 void Mac16094Metrics::recordChannelPackets(int chan){
@@ -173,7 +173,11 @@ void Mac16094Metrics::handleSelfMsg(cMessage* msg) {
 
         simtime_t sendingDuration = RADIODELAY_11P + getFrameDuration(mac->getBitLength(), mcs);
         DBG_MAC << "Sending duration will be" << sendingDuration << std::endl;
-        std::cout<<"SendingDuration"<<sendingDuration<<std::endl;
+        std::cout<<"SendingDuration: "<<sendingDuration<<std::endl;
+        std::cout<<"SendingDuration S: "<<sendingDuration.inUnit(SIMTIME_S)<<std::endl;
+        std::cout<<"SendingDuration MS: "<<sendingDuration.inUnit(SIMTIME_MS)<<std::endl;
+        std::cout<<"txPower_mW: "<<txPower_mW<<std::endl;
+        std::cout<<"txPower: "<<txPower<<std::endl;
         if ((!useSCH) || (timeLeftInSlot() > sendingDuration)) {
             if (useSCH) DBG_MAC << " Time in this slot left: " << timeLeftInSlot() << std::endl;
 
@@ -194,9 +198,10 @@ void Mac16094Metrics::handleSelfMsg(cMessage* msg) {
                 scheduleAt(simTime() + timeOut, myEDCA[activeChannel]->myQueues[lastAC].ackTimeOut);
 
             }
-
+            std::cout<<"txPower"<<txPower<<std::endl;
             recordChannelUtilized(sendingDuration);
             recordSignalQuality(txPower_mW);
+            std::cout<<"SignalQuality"<<previousSignalQuality[(activeChannel == type_CCH) ? Channels::CCH : mySCH]<<std::endl;
 
         } else {   //not enough time left now
             DBG_MAC<< "Too little Time left. This packet cannot be send in this slot."<< std::endl;
@@ -230,11 +235,11 @@ void Mac16094Metrics::finish() {
     recordScalar("chUtilizationHPPS", channelUtilization.at(Channels::HPPS));
     recordScalar("chUtilizationCRIT_SOL",channelUtilization.at(Channels::CRIT_SOL));
 
-    recordScalar("previousSignalQualityCCH", channelUtilization.at(Channels::CCH));
-    recordScalar("previousSignalQualitySCH1", channelUtilization.at(Channels::SCH1));
-    recordScalar("previousSignalQualitySCH2", channelUtilization.at(Channels::SCH2));
-    recordScalar("previousSignalQualitySCH3", channelUtilization.at(Channels::SCH3));
-    recordScalar("previousSignalQualitySCH4", channelUtilization.at(Channels::SCH4));
+    recordScalar("previousSignalQualityCCH", previousSignalQuality.at(Channels::CCH));
+    recordScalar("previousSignalQualitySCH1", previousSignalQuality.at(Channels::SCH1));
+    recordScalar("previousSignalQualitySCH2", previousSignalQuality.at(Channels::SCH2));
+    recordScalar("previousSignalQualitySCH3", previousSignalQuality.at(Channels::SCH3));
+    recordScalar("previousSignalQualitySCH4", previousSignalQuality.at(Channels::SCH4));
 
     recordScalar("chPacketsCCH", channelPacketsTransmitted.at(Channels::CCH));
     recordScalar("chPacketsSCH1", channelPacketsTransmitted.at(Channels::SCH1));
@@ -403,7 +408,7 @@ int Mac16094Metrics::randomizeSCH( int min, int max) {
 
 
 
-void Mac1609_4::handleLowerControl(cMessage* msg) {
+void Mac16094Metrics::handleLowerControl(cMessage* msg) {
     if (msg->getKind() == MacToPhyInterface::PHY_RX_START) {
         rxStartIndication = true;
     } else if (msg->getKind() == MacToPhyInterface::PHY_RX_END_WITH_SUCCESS) {
@@ -521,7 +526,7 @@ void Mac16094Metrics::computeThroughputMbps(Metrics* metrics,
     throughputMbps = metrics->computeThroughput(statsMbpsReceived, currentTime);
 }
 
-double Mac16094Metrics::getThroughputMbps() {
+double Mac16094Metrics::getThroughputMbps( ) {
     return throughputMbps;
 }
 
