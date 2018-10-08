@@ -61,8 +61,6 @@ void Mac16094Metrics::initialize(int i) {
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH3, 0.0));
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH4, 0.0));
 
-
-
     Mac1609_4::initialize(i);
 
     WATCH(throughputMetricMac);
@@ -79,6 +77,7 @@ void Mac16094Metrics::recordChannelUtilized(const simtime_t& sendingDuration) {
 
 void Mac16094Metrics::recordSignalQuality(double txPower){
     int channelUtilized = (activeChannel == type_CCH) ? Channels::CCH : mySCH;
+
     previousSignalQuality[channelUtilized] = txPower;
 }
 
