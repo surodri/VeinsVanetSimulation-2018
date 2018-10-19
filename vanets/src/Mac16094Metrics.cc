@@ -82,7 +82,7 @@ void Mac16094Metrics::recordSignalQuality(double txPower){
 }
 
 void Mac16094Metrics::recordChannelPackets(int chan){
-    int channelNow = (activeChannel == type_CCH) ? Channels::CCH : mySCH;
+    int channelNow = (chan == type_CCH) ? Channels::CCH : mySCH;
     channelPacketsTransmitted[channelNow] ++;
 }
 
@@ -200,6 +200,7 @@ void Mac16094Metrics::handleSelfMsg(cMessage* msg) {
             std::cout<<"txPower"<<txPower<<std::endl;
             recordChannelUtilized(sendingDuration);
             recordSignalQuality(txPower_mW);
+            recordChannelPackets(activeChannel);
             std::cout<<"SignalQuality"<<previousSignalQuality[(activeChannel == type_CCH) ? Channels::CCH : mySCH]<<std::endl;
 
         } else {   //not enough time left now
@@ -360,9 +361,12 @@ void Mac16094Metrics::handleUpperMsg(cMessage* msg) {
     if (num == 1 && idleChannel == true && chan == activeChannel) {
 
         WaveShortMessage* someMsg = dynamic_cast<WaveShortMessage*>(msg);
-        simtime_t duration = someMsg->getDuration();
+        simtime_t duration = getFrameDuration(someMsg->getBitLength());
         std::cout<<"Duration time in active channel" << duration <<std::endl;
+        recordChannelUtilized(duration);
+        std::cout<<"SOME duration"<<duration<<std::endl;
         simtime_t nextEvent = myEDCA[chan]->startContent(lastIdle,guardActive());
+
 
         if (nextEvent != -1) {
             if ((!useSCH) || (nextEvent <= nextChannelSwitch->getArrivalTime())) {
