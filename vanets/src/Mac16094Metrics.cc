@@ -61,6 +61,11 @@ void Mac16094Metrics::initialize(int i) {
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH3, 0.0));
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH4, 0.0));
 
+    numberOfNeighbors = 0;
+
+    for(int index = 0; index<200; index++){
+        neighbors[index]=0;
+    }
     Mac1609_4::initialize(i);
 
     WATCH(throughputMetricMac);
@@ -84,6 +89,19 @@ void Mac16094Metrics::recordSignalQuality(double txPower){
 void Mac16094Metrics::recordChannelPackets(int chan){
     int channelNow = (chan == type_CCH) ? Channels::CCH : mySCH;
     channelPacketsTransmitted[channelNow] ++;
+}
+
+void Mac16094Metrics::recordNeighbors(int senderId, long receiverAddr){
+
+    std::cout<<"senderId: " <<senderId <<"neighbor count"<< neighbors.at(senderId)<<std::endl;
+    std::cout<<"ReceiverId:" << receiverAddr<<"number of neighbors: "<<numberOfNeighbors <<std::endl;
+
+    if(neighbors.at(senderId)==0){
+        neighbors[senderId]=1;
+        numberOfNeighbors = numberOfNeighbors+1;
+    }else {
+        neighbors[senderId]++;
+    }
 }
 
 void Mac16094Metrics::handleSelfMsg(cMessage* msg) {
@@ -247,6 +265,8 @@ void Mac16094Metrics::finish() {
     recordScalar("chPacketsSCH3", channelPacketsTransmitted.at(Channels::SCH3));
     recordScalar("chPacketsSCH4", channelPacketsTransmitted.at(Channels::SCH4));
 
+    recordScalar("numberOfNeighbors", numberOfNeighbors);
+
     Mac1609_4::finish();
 }
 
@@ -286,6 +306,8 @@ void Mac16094Metrics::handleLowerMsg(cMessage* message) {
             double statsReceivedPacketsDbl = (double) statsReceivedPackets;
             double time = simTime().dbl();
 
+            recordNeighbors(macPkt->getSenderModuleId(), myMacAddress);
+
             sendUp(wsm);
         } else if (dest == LAddress::L2BROADCAST()) {
 
@@ -300,6 +322,7 @@ void Mac16094Metrics::handleLowerMsg(cMessage* message) {
             computeThroughput(metrics, statsReceivedBroadcastsDbl, time);
             computeThroughputMbps(metrics, messageBits, statsMbpsReceived, time);
 
+            recordNeighbors(macPkt->getSenderModuleId(), myMacAddress);
             sendUp(wsm);
         } else {
             DBG_MAC << "Packet not for me, deleting..." << std::endl;

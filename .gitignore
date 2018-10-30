@@ -1,4 +1,4 @@
-vanets/out/*
+vanets/out/
 vanets/simulations/*.anf
 vanets/.settings
 vanets/src/Makefile

@@ -17,7 +17,7 @@
 #define MAC16094METRICS_H_
 
 #include "../../veins/src/veins/modules/mac/ieee80211p/Mac1609_4.h"
-
+using namespace std;
 #include <Metrics.h>
 class Mac16094Metrics : public Mac1609_4{
 public:
@@ -39,6 +39,8 @@ public:
     std::map<int,simtime_t> channelUtilization;
     std::map<int, double> previousSignalQuality;
     std::map<int, double> channelPacketsTransmitted;
+    std::array<int, 200> neighbors;
+    int numberOfNeighbors;
 
 protected:
     void computeThroughput(Metrics*, double, double);
@@ -61,6 +63,8 @@ private:
     void recordChannelUtilized(const omnetpp::simtime_t& sendingDuration);
     void recordSignalQuality(double txPower);
     void recordChannelPackets(int chan);
+    void recordNeighbors(int senderId, long receiverAddr);
+    void recordScalarNeighbors();
 };
 
 #endif /* MAC16094METRICS_H_ */
