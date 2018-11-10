@@ -1,6 +1,11 @@
 # VeinsVanetSimulation-2018
 ## Tech Stack :
-Debian GNU/Linux 9 (stretch) 64-bit, Omnetpp-5.2.1,  Sumo 0.30, Instant Veins 4.6
+
+* Debian GNU/Linux 9 (stretch) 64-bit
+* Omnetpp-5.2.1
+* Sumo 0.30
+* Instant Veins 4.6
+* Catch (Unit Testing Framework)
 
 ## Veins Vanet Simulation
 Aim to simulate ATB Protocol using standards Mac 1609.4 and IEEE 80211p
