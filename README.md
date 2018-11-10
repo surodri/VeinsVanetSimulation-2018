@@ -41,25 +41,25 @@ Click the button with the flag to conclude simulation
 Clicking the flag will finish the simulation and generate the result files under
 /vanets/src/results/
 
-##Test Framework Setup:
-###Install Catch: 
+## Test Framework Setup:
+### Install Catch: 
 
-`$ cd vanets/test/Catch2/`
+```$ cd vanets/test/Catch2/```
 
-`$ cmake -Bbuild -H. -DBUILD_TESTING=OFF`
+```$ cmake -Bbuild -H. -DBUILD_TESTING=OFF```
 
-`$ sudo cmake --build build/ --target install`
+```$ sudo cmake --build build/ --target install```
 
-####Run tests:
+#### Run tests:
 
-`$ cd vanet/test/`
+```$ cd vanet/test/```
 
 Compile
 `$ g++ -std=c++11 -Wall -Icatch2/catch.h -I../src/ChannelService.h -o ChannelServiceTest ChannelServiceTest.cc && ChannelServiceTest --success`
 
 Run
-`$ <To add>`
+```$ <To add>```
 
-###Install cmake: 
+### Install cmake: 
 https://cmake.org/install/
  
