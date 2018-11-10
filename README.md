@@ -43,13 +43,19 @@ Select the file [/vanets/src/omnetpp.ini]
 /vanets/src/results/
 
 ## Test Framework Setup:
-### Install Catch: 
+#### Install Catch: 
 
-```$ cd vanets/test/Catch2/```
 
-```$ cmake -Bbuild -H. -DBUILD_TESTING=OFF```
 
-```$ sudo cmake --build build/ --target install```
+Download catch 
+```
+$ cd vanets/test/Catch2/
+$ git clone https://github.com/catchorg/Catch2.git
+$ cd Catch2
+$ cmake -Bbuild -H. -DBUILD_TESTING=OFF
+$ sudo cmake --build build/ --target install
+
+```
 
 #### Run tests:
 
