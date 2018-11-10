@@ -19,6 +19,7 @@
 #include "../../veins/src/veins/modules/mac/ieee80211p/Mac1609_4.h"
 using namespace std;
 #include <Metrics.h>
+#include "ChannelService.h"
 class Mac16094Metrics : public Mac1609_4{
 public:
     virtual ~Mac16094Metrics();
@@ -41,6 +42,8 @@ public:
     std::map<int, double> channelPacketsTransmitted;
     std::array<int, 200> neighbors;
     int numberOfNeighbors;
+    std::map<int, double> channelQuality;
+    ChannelService* channelService;
 
 protected:
     void computeThroughput(Metrics*, double, double);

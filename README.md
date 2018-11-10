@@ -17,12 +17,12 @@ Procedures 👍
 Run simulation
 Go inside simulation folder
 
-$ cd vanets/
+`$ cd vanets/`
 
 Run sumo socket
 Open terminal window
 
-$ ./sumo-launchd.py -vv -c sumo-gui
+`$ ./sumo-launchd.py -vv -c sumo-gui`
 
 Run omnetpp simulation
 Go to omnetpp IDE (eclipse)
@@ -40,3 +40,26 @@ Click on stop button
 Click the button with the flag to conclude simulation
 Clicking the flag will finish the simulation and generate the result files under
 /vanets/src/results/
+
+##Test Framework Setup:
+###Install Catch: 
+
+`$ cd vanets/test/Catch2/`
+
+`$ cmake -Bbuild -H. -DBUILD_TESTING=OFF`
+
+`$ sudo cmake --build build/ --target install`
+
+####Run tests:
+
+`$ cd vanet/test/`
+
+Compile
+`$ g++ -std=c++11 -Wall -Icatch2/catch.h -I../src/ChannelService.h -o ChannelServiceTest ChannelServiceTest.cc && ChannelServiceTest --success`
+
+Run
+`$ <To add>`
+
+###Install cmake: 
+https://cmake.org/install/
+ 

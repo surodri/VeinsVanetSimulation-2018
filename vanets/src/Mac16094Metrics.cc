@@ -42,9 +42,9 @@ void Mac16094Metrics::initialize(int i) {
 
     throughputSignalMac = registerSignal("throughputSignalMac");
     channelUtilization.insert(std::pair<int, double>(Channels::CRIT_SOL, 0.0));
+    channelUtilization.insert(std::pair<int, double>(Channels::CCH, 0.0));
     channelUtilization.insert(std::pair<int, double>(Channels::SCH1, 0.0));
     channelUtilization.insert(std::pair<int, double>(Channels::SCH2, 0.0));
-    channelUtilization.insert(std::pair<int, double>(Channels::CCH, 0.0));
     channelUtilization.insert(std::pair<int, double>(Channels::SCH3, 0.0));
     channelUtilization.insert(std::pair<int, double>(Channels::SCH4, 0.0));
     channelUtilization.insert(std::pair<int, double>(Channels::HPPS, 0.0));
@@ -61,7 +61,15 @@ void Mac16094Metrics::initialize(int i) {
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH3, 0.0));
     channelPacketsTransmitted.insert(std::pair<int, double>(Channels::SCH4, 0.0));
 
+    channelQuality.insert(std::pair<int, double>(Channels::CCH, 0.0));
+    channelQuality.insert(std::pair<int, double>(Channels::SCH1, 0.0));
+    channelQuality.insert(std::pair<int, double>(Channels::SCH2, 0.0));
+    channelQuality.insert(std::pair<int, double>(Channels::SCH3, 0.0));
+    channelQuality.insert(std::pair<int, double>(Channels::SCH4, 0.0));
+
     numberOfNeighbors = 0;
+
+    channelService = new ChannelService();
 
     for(int index = 0; index<200; index++){
         neighbors[index]=0;

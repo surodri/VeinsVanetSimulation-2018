@@ -1,6 +1,13 @@
 vanets/out/
 vanets/simulations/*.anf
-vanets/.settings
 vanets/src/Makefile
 vanets/src/vanets
 vanets/src/vanets_dbg
+vanets/src/Makefile
+vanets/src/vanets_dbg
+/.metadata/
+vanets/.settings/
+vanets/.csettings/
+veins/.csettings/
+veins/.settings/
+
