@@ -14,6 +14,9 @@ Using standards Mac 1609.4 and IEEE 80211p
 - vanets/ - Is subclassing from veins framework + some recordings for collisions and channel utilization
 - veins/ - Open source vehicular networks framework with some added logging for debugging
 
+Original veins found here. 
+https://github.com/sommer/veins.git
+
 
 
 ## Procedures 👍
