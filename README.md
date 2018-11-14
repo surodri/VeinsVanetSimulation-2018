@@ -8,10 +8,10 @@
 * Catch (Unit Testing Framework)
 
 ## Veins Vanet Simulation
-Aim to simulate ATB Protocol using standards Mac 1609.4 and IEEE 80211p
+Using standards Mac 1609.4 and IEEE 80211p
 
 ## Directory content
-- vanets/ - Simulation to mimic MCB protocol, it is subclassing from veins framework
+- vanets/ - Is subclassing from veins framework + some recordings for collisions and channel utilization
 - veins/ - Open source vehicular networks framework with some added logging for debugging
 
 
