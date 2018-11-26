@@ -14,12 +14,33 @@ metrics = ["SentPackets",
 		"receivedFramesLowerMsg",
 		"receivedBitsLowerPackets",
 		"receivedBits",
-		"packetsNotForMe",
+		"packetsNotForMe"
+                "chUtilizationCCH",
 		"chUtilizationSCH1",
 		"chUtilizationSCH2",
 		"chUtilizationSCH3",
 		"chUtilizationSCH4",
-		"chUtilizationCCH"]
+		"chUtilizationHPPS",
+                "chUtilizationCRIT_SOL",
+                "previousSignalQualityCCH",
+                "previousSignalQualitySCH1",
+                "previousSignalQualitySCH2",
+                "previousSignalQualitySCH3",
+                "previousSignalQualitySCH4",
+                "chPacketsCCH",
+                "chPacketsSCH1",
+                "chPacketsSCH2",
+                "chPacketsSCH3",
+                "chPacketsSCH4",
+                "numberOfNeighbors",
+                "totalBusyTime",
+                "ncollisions",
+                "generatedWSMs",
+                "receivedWSMs",
+                "generatedBSMs",
+                "receivedBSMs",
+                "generatedWSAs",
+                "receivedWSAs"]
 
 for metric in metrics:
 		
@@ -38,4 +59,3 @@ for metric in metrics:
 		createResultsCommand = "grep -r " + metric + " " +scalarFile + " > ../../../results_per_metric/" + metricFile
 		print(createResultsCommand)
 		os.popen(createResultsCommand)
-
