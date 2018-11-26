@@ -1,0 +1,624 @@
+chUtilizationSCH4,chUtilizationSCH4_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0
+12,0
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0
+25,0
+26,0
+27,0
+28,0
+29,0
+30,0
+chUtilizationSCH3,chUtilizationSCH3_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0.000465
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0.000465
+12,0.000465
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0.000465
+22,0.000233
+23,0
+24,0.000465
+25,0.00093
+26,0.00093
+27,0
+28,0
+29,0.000233
+30,0
+chUtilizationSCH2,chUtilizationSCH2_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0.000465
+3,0.00093
+4,0.000465
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0.000465
+12,0.000465
+13,0
+14,0
+15,0.000233
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0.000233
+24,0.000465
+25,0.000465
+26,0.000465
+27,0
+28,0.000233
+29,0
+30,0
+chUtilizationSCH1,chUtilizationSCH1_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0.000465
+4,0
+5,0.000233
+6,0.000233
+7,0.000233
+8,0.000233
+9,0.000233
+10,0.000233
+11,0.000465
+12,0.000465
+13,0.000233
+14,0.000465
+15,0
+16,0.000465
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0.000465
+25,0
+26,0
+27,0.000465
+28,0
+29,0
+30,0
+chUtilizationCCH,chUtilizationCCH_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0.380212
+2,0.362842
+3,0.384072
+4,0.353192
+5,0.219957
+6,0.216162
+7,0.212237
+8,0.208377
+9,0.204517
+10,0.200657
+11,0.196862
+12,0.191007
+13,0.187212
+14,0.181357
+15,0.343542
+16,0.175567
+17,0.115802
+18,0.110012
+19,0.106152
+20,0.102292
+21,0.096502
+22,0.092642
+23,0.088782
+24,0.084922
+25,0.081062
+26,0.333892
+27,0.075272
+28,0.069482
+29,0.057902
+30,0.005597
+31,0
+32,0.326172
+33,0.316522
+34,0.306677
+35,0.297222
+36,0.289502
+37,0.225812
+38,0.374422
+39,0.364772
+40,0
+packetsNotForMe,packetsNotForMe_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0
+12,0
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0
+25,0
+26,0
+27,0
+28,0
+29,0
+30,0
+31,0
+32,0
+33,0
+34,0
+35,0
+36,0
+37,0
+38,0
+39,0
+40,0
+packetsNotForMe,packetsNotForMe_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0
+12,0
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0
+25,0
+26,0
+27,0
+28,0
+29,0
+30,0
+31,0
+32,0
+33,0
+34,0
+35,0
+36,0
+37,0
+38,0
+39,0
+40,0
+receivedBits,receivedBits_CCH_SCH_Safety_B_100Bytes_Q_1.txt,receivedBitsLowerPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,LowerPackets 0
+2,LowerPackets 0
+3,LowerPackets 0
+4,LowerPackets 0
+5,LowerPackets 0
+6,LowerPackets 0
+7,LowerPackets 0
+8,LowerPackets 0
+9,LowerPackets 0
+10,LowerPackets 0
+11,LowerPackets 0
+12,LowerPackets 0
+13,LowerPackets 0
+14,LowerPackets 0
+15,LowerPackets 0
+16,LowerPackets 0
+17,LowerPackets 0
+18,LowerPackets 0
+19,LowerPackets 0
+20,LowerPackets 0
+21,LowerPackets 0
+22,LowerPackets 0
+23,LowerPackets 0
+24,LowerPackets 0
+25,LowerPackets 0
+26,LowerPackets 0
+27,LowerPackets 0
+28,LowerPackets 0
+29,LowerPackets 0
+30,LowerPackets 0
+1,LowerPackets 0
+2,LoserWsm 0
+3,LowerPackets 0
+4,LoserWsm 0
+5,LowerPackets 0
+6,LoserWsm 0
+7,LowerPackets 0
+8,LoserWsm 0
+9,LowerPackets 0
+10,LoserWsm 0
+11,LowerPackets 0
+12,LoserWsm 0
+13,LowerPackets 0
+14,LoserWsm 0
+15,LowerPackets 0
+16,LoserWsm 0
+17,LowerPackets 0
+18,LoserWsm 0
+19,LowerPackets 0
+20,LoserWsm 0
+21,LowerPackets 0
+22,LoserWsm 0
+23,LowerPackets 0
+24,LoserWsm 0
+25,LowerPackets 0
+26,LoserWsm 0
+27,LowerPackets 0
+28,LoserWsm 0
+29,LowerPackets 0
+30,LoserWsm 0
+31,LowerPackets 0
+32,LoserWsm 0
+33,LowerPackets 0
+34,LoserWsm 0
+35,LowerPackets 0
+36,LoserWsm 0
+37,LowerPackets 0
+38,LoserWsm 0
+39,LowerPackets 0
+40,LoserWsm 0
+41,LowerPackets 0
+42,LoserWsm 0
+43,LowerPackets 0
+44,LoserWsm 0
+45,LowerPackets 0
+46,LoserWsm 0
+47,LowerPackets 0
+48,LoserWsm 0
+49,LowerPackets 0
+50,LoserWsm 0
+51,LowerPackets 0
+52,LoserWsm 0
+53,LowerPackets 0
+54,LoserWsm 0
+55,LowerPackets 0
+56,LoserWsm 0
+57,LowerPackets 0
+58,LoserWsm 0
+59,LowerPackets 0
+60,LoserWsm 0
+receivedBitsLowerPackets,receivedBitsLowerPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0
+12,0
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0
+25,0
+26,0
+27,0
+28,0
+29,0
+30,0
+receivedFramesLowerMsg,receivedFramesLowerMsg_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,132338
+2,136065
+3,60259
+4,124745
+5,40770
+6,39419
+7,38412
+8,37013
+9,35121
+10,31910
+11,34879
+12,35254
+13,33993
+14,32540
+15,110510
+16,30236
+17,6580
+18,4287
+19,2877
+20,1570
+21,101771
+22,93289
+23,84774
+24,80413
+25,74459
+26,71649
+27,42978
+28,132524
+29,131761
+30,0
+ReceivedBroadcasts,ReceivedBroadcasts_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,132338
+2,136065
+3,60259
+4,124745
+5,40770
+6,39419
+7,38412
+8,37013
+9,35121
+10,31910
+11,34879
+12,35254
+13,33993
+14,32540
+15,110510
+16,30236
+17,6580
+18,4287
+19,2877
+20,1570
+21,101771
+22,93289
+23,84774
+24,80413
+25,74459
+26,71649
+27,42978
+28,132524
+29,131761
+30,87116
+31,0
+TotalLostPackets,TotalLostPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,464476
+2,459348
+3,186913
+4,464737
+5,329454
+6,322477
+7,314788
+8,307501
+9,300340
+10,294581
+11,280483
+12,263850
+13,254126
+14,238503
+15,471076
+16,223553
+17,56310
+18,39704
+19,28289
+20,16701
+21,470404
+22,469252
+23,465396
+24,456970
+25,446773
+26,436355
+27,339454
+28,464603
+29,464884
+30,460248
+31,0
+SNIRLostPackets,SNIRLostPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,369737
+2,362436
+3,159452
+4,371093
+5,279575
+6,273018
+7,267109
+8,260391
+9,254567
+10,251912
+11,235795
+12,219828
+13,210958
+14,197430
+15,382531
+16,185888
+17,48123
+18,34476
+19,25111
+20,15292
+21,385109
+22,389652
+23,387513
+24,381010
+25,374946
+26,366337
+27,288277
+28,370911
+29,369202
+30,460248
+31,0
+RXTXLostPackets,RXTXLostPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,94739
+2,96912
+3,27461
+4,93644
+5,49879
+6,49459
+7,47679
+8,47110
+9,45773
+10,42669
+11,44688
+12,44022
+13,43168
+14,41073
+15,88545
+16,37665
+17,8187
+18,5228
+19,3178
+20,1409
+21,85295
+22,79600
+23,77883
+24,75960
+25,71827
+26,70018
+27,51177
+28,93692
+29,95682
+30,0
+31,0
+DroppedPacketsInMac,DroppedPacketsInMac_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,130149
+2,134343
+3,55428
+4,121141
+5,37970
+6,36768
+7,36281
+8,34668
+9,32742
+10,29564
+11,33163
+12,33962
+13,32617
+14,31369
+15,106161
+16,29073
+17,5585
+18,3258
+19,1932
+20,767
+21,98150
+22,88633
+23,80597
+24,76566
+25,70503
+26,68069
+27,40782
+28,130568
+29,129633
+30,2
+31,0
+ReceivedUnicastPackets,ReceivedUnicastPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,0
+2,0
+3,0
+4,0
+5,0
+6,0
+7,0
+8,0
+9,0
+10,0
+11,0
+12,0
+13,0
+14,0
+15,0
+16,0
+17,0
+18,0
+19,0
+20,0
+21,0
+22,0
+23,0
+24,0
+25,0
+26,0
+27,0
+28,0
+29,0
+30,0
+31,0
+SentPackets,SentPackets_CCH_SCH_Safety_B_100Bytes_Q_1.txt
+1,46094
+2,45749
+3,26772
+4,42720
+5,15967
+6,15521
+7,14917
+8,14471
+9,13984
+10,12888
+11,13449
+12,13161
+13,12801
+14,12071
+15,39050
+16,11158
+17,2299
+18,1443
+19,890
+20,380
+21,36096
+22,34132
+23,31637
+24,30077
+25,28429
+26,26962
+27,16590
+28,45810
+29,45275
+30,9
+31,0
